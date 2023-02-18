@@ -3,7 +3,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAccessToken, fetchAuth } from '../../store/auth/authActions';
 
-export const PrivateRoutes = ({ children }) => {
+export const Private = ({ children }) => {
   const token = localStorage.getItem('refresh');
   const dispatch = useDispatch();
   const auth = useSelector(store => store.checkAuth);

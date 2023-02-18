@@ -1,9 +1,8 @@
 import React from 'react';
 
+import { MainWrapper } from './mainStyled';
+import { Users } from '../users/users';
+
 export const Main = () => {
-  return (
-    <div>
-      <h1>MAIN</h1>
-    </div>
-  );
+  return <MainWrapper>{/*<Users />*/}</MainWrapper>;
 };

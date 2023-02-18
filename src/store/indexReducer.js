@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 import { checkAuth } from './auth/authReducer';
 import { logout } from './logout/logoutReducer';
+import { userReducer } from './users/usersReducer';
 
 export const appReducer = combineReducers({
   checkAuth,
+  userReducer,
   logout,
 });
 

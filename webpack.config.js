@@ -39,6 +39,7 @@ const plugins = () => {
     new HtmlWebPackPlugin({
       template: './index.html',
       minify: { collapseWhitespace: isProd },
+      publicPath: '/',
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
