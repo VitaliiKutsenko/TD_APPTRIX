@@ -8,7 +8,9 @@ import {
 import { Layout } from '../components/layout/layout';
 import { Auth } from '../pages/auth/auth';
 import { Main } from '../pages/main/main';
-import { PrivateRoutes } from './private/privateRoutes';
+import { Private } from './private/privateRoutes';
+import { Users } from '../pages/users/users';
+import { User } from '../pages/user/user';
 
 export const rootRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -16,11 +18,21 @@ export const rootRouter = createBrowserRouter(
       <Route
         index
         element={
-          <PrivateRoutes>
+          <Private>
             <Main />
-          </PrivateRoutes>
+          </Private>
         }
       />
+      <Route
+        path="users/*"
+        element={
+          <Private>
+            <Users />
+          </Private>
+        }
+      />
+      <Route path="users/:id" element={<User />} />
+
       <Route path="auth" element={<Auth />} />
       <Route path="*" element={<div>Error</div>} />
     </Route>
